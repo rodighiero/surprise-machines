@@ -56,7 +56,7 @@ function Config() {
   var bigTexSize = Math.min(2 ** 13, webgl.limits.textureSize)
   this.size = {
     cell: 32, // height of each cell in atlas
-    lodCell: 256, // height of each cell in LOD (was 128; bumped to match 256 px WebP thumbs)
+    lodCell: 128, // height of each cell in LOD
     atlas: smallTexSize, // height of each atlas
     texture: this.isTouchDevice ? smallTexSize : webgl.limits.textureSize,
     lodTexture: this.isTouchDevice ? smallTexSize : bigTexSize, // one detail texture buffer
@@ -2893,9 +2893,17 @@ LOD.prototype.addCellsToLodTexture = function () {
       // add the cell data to the data stores
       this.state.gridPosToCoords[gridKey].push(Object.assign({}, coords, { cellIdx: cell.idx }));
       this.state.cellIdxToCoords[cell.idx] = coords;
-      // draw the cell's image in a new canvas
+      // draw the cell's image in a new canvas. Source thumbs are 256 px on the
+      // longest side; the LOD slot is 128 px. We pass cell.w / cell.h (which
+      // are at the 128 px scale used everywhere else) so the thumb is scaled
+      // proportionally into the slot's upper-left, matching the rectangle the
+      // shader samples from cell_sizes.
       this.cell.ctx.clearRect(0, 0, config.size.lodCell, config.size.lodCell);
-      this.cell.ctx.drawImage(this.cellIdxToImage[cell.idx], 0, 0);
+      this.cell.ctx.drawImage(
+        this.cellIdxToImage[cell.idx],
+        0, 0,
+        cell.w, cell.h
+      );
       var tex = world.getTexture(this.cell.canvas);
       world.renderer.copyTextureToTexture(coords, tex, this.tex.texture);
       // activate the cell to update tex index and offsets
