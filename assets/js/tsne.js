@@ -56,7 +56,7 @@ function Config() {
   var bigTexSize = Math.min(2 ** 13, webgl.limits.textureSize)
   this.size = {
     cell: 32, // height of each cell in atlas
-    lodCell: 128, // height of each cell in LOD
+    lodCell: 256, // height of each cell in LOD (was 128; bumped to match 256 px WebP thumbs)
     atlas: smallTexSize, // height of each atlas
     texture: this.isTouchDevice ? smallTexSize : webgl.limits.textureSize,
     lodTexture: this.isTouchDevice ? smallTexSize : bigTexSize, // one detail texture buffer
