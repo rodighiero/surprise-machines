@@ -1,10 +1,10 @@
 # Surprise Machines
 
-![Surprise Machines visualization](assets/images/surprise-machines.jpg)
+![Surprise Machines visualization](assets/images/surprise-machines.png)
 
-*Surprise Machines* is a data visualization that maps more than 213,000 digitized images from the Harvard Art Museums collection. It was created as part of *Curatorial A(i)gents*, an exhibition organized by metaLAB (at) Harvard in spring 2022, and asks what it means for a machine to curate — to surprise.
+_Surprise Machines_ is a data visualization that maps more than 213,000 digitized images from the Harvard Art Museums collection. It was created as part of _Curatorial A(i)gents_, an exhibition organized by metaLAB (at) Harvard in spring 2022, and asks what it means for a machine to curate — to surprise.
 
-The project takes its name from Alan Turing, who, replying to Ada Lovelace's claim that machines are incapable of taking us by surprise, argued the opposite: that machines astonish us all the time, precisely through their unpredictability. Here, the surprise is one of scale. Visitors confront the vastness of a collection that cannot be hung on walls. Less than one percent of the 200,000-plus works ever finds its way into public view; the rest live in storage, in archives, in databases. *Surprise Machines* renders that hidden body visible.
+The project takes its name from Alan Turing, who, replying to Ada Lovelace's claim that machines are incapable of taking us by surprise, argued the opposite: that machines astonish us all the time, precisely through their unpredictability. Here, the surprise is one of scale. Visitors confront the vastness of a collection that cannot be hung on walls. Less than one percent of the 200,000-plus works ever finds its way into public view; the rest live in storage, in archives, in databases. _Surprise Machines_ renders that hidden body visible.
 
 ## How it works
 
@@ -16,7 +16,7 @@ Dario Rodighiero, Lins Derry, Douglas Duhaime, Jordan Kruguer, Maximilian C. Mue
 
 ## Citation
 
-Rodighiero, D., Derry, L., Duhaime, D., Kruguer, J., Mueller, M. C., Pietsch, C., Schnapp, J. T., Steward, J., & metaLAB. (2022). Surprise Machines: Revealing Harvard Art Museums' image collection. *Information Design Journal*, 27(1), 21–34. <https://doi.org/10.1075/idj.22013.rod>
+Rodighiero, D., Derry, L., Duhaime, D., Kruguer, J., Mueller, M. C., Pietsch, C., Schnapp, J. T., Steward, J., & metaLAB. (2022). Surprise Machines: Revealing Harvard Art Museums' image collection. _Information Design Journal_, 27(1), 21–34. <https://doi.org/10.1075/idj.22013.rod>
 
 ## License
 
